@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    
+    <!-- Static obstacle for autonomous navigation -->
+    	<model name="test_obstacle">
+      	<static>true</static>
+      	<pose>2.5 0 0.5 0 0 0</pose>
+
+      	<link name="obstacle_link">
+        	<collision name="collision">
+          		<geometry>
+            			<box>
+              				<size>0.5 0.5 1.0</size>
+            			</box>
+          		</geometry>
+        	</collision>
+
+        	<visual name="visual">
+          		<geometry>
+            			<box>
+              				<size>0.5 0.5 1.0</size>
+            			</box>
+          		</geometry>
+          		<material>
+            			<ambient>0.8 0.1 0.1 1</ambient>
+            			<diffuse>0.8 0.1 0.1 1</diffuse>
+          		</material>
+        	</visual>
+      	</link>
+    </model>
+
+    <!-- Gazebo Ground Truth State Publisher -->
+    <plugin name="gazebo_ros_state"
+            filename="libgazebo_ros_state.so">
+      <ros>
+        <namespace>/gazebo</namespace>
+      </ros>
+      <update_rate>30.0</update_rate>
+    </plugin>
+
+  </world>
+</sdf>
