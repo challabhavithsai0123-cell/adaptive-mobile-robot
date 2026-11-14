@@ -17,7 +17,7 @@ setup(
     zip_safe=True,
     maintainer='bhavisai',
     maintainer_email='bhavisai@example.com',
-    description='ROS 2 webcam image publisher',
+    description='ROS 2 mobile robot simulation, obstacle avoidance and data logging',
     license='Apache-2.0',
     entry_points={
         'console_scripts': [
@@ -26,6 +26,7 @@ setup(
 	    'target_controller = sentry_camera.target_controller:main',
             'obstacle_avoidance = sentry_camera.obstacle_avoidance:main',
             'data_logger = sentry_camera.data_logger:main',
+            'comparison_logger = sentry_camera.comparison_logger:main',
         ],
     },
 )
