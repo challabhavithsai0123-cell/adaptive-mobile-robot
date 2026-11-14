@@ -3,13 +3,17 @@
 <package format="3">
   <name>sentry_camera</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>ROS 2 mobile robot simulation, LiDAR obstacle avoidance, camera utilities and experiment logging.</description>
   <maintainer email="bhavisai@todo.todo">bhavisai</maintainer>
-  <license>TODO: License declaration</license>
+  <license>Apache-2.0</license>
 
   <depend>rclpy</depend>
   <depend>sensor_msgs</depend>
   <depend>cv_bridge</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>gazebo_msgs</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
